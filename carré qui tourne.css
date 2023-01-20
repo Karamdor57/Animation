@@ -1,0 +1,53 @@
+body {
+  display:flex;
+  height: 100px;
+  background-color: skyblue;
+  align-items: center;
+  justify-content: center;
+}
+
+.tourne {
+  position: absolute;
+  bottom: 100px;
+  width: 155px;
+  height: 155px;
+  background-color: red;
+  border-radius: 0;
+  animation-name: rotate;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+@keyframes rotate{
+  0%{
+    transform: rotate(0deg);
+    border-radius: 0;
+  }
+   25%{
+    transform: rotate(45deg);
+    border-radius: 0;
+    border-top-left-radius: 50%;
+    background-color: green;
+  }
+  50%{
+    transform: rotate(90deg);
+    border-radius: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: blue;
+  }
+  75%{
+    transform: rotate(135deg);
+    border-radius: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: black;
+  }  
+  100%{
+    transform: rotate(180deg);
+    border-radius: 50%;
+    background-color: red;
+  } 
+}
